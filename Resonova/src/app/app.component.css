@@ -1,0 +1,12 @@
+nav {
+    width: clamp(130px, 12dvw, 300px);
+    position: absolute;
+    z-index: 1;
+    height: 100dvh;
+}
+main {
+    width: 100%;
+}
+div { 
+    display: flex;
+}
