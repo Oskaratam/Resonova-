@@ -2,11 +2,9 @@
     <div class="logo-box"></div>
     <div class="nav-bar-content">
         <ul>
-            <li>Home</li>
-            <li>Courses</li>
-            <li>Teachers</li>
-            <li>Prices</li>
-            <li>Merch</li>
+            @for (option of navBarOptions; track option.id) {
+                <li (click)="onPick(option)" [class.picked]="navOptionsService.pickedOption.name === option.name" [routerLink]="['/', option.name.toLowerCase()]"> {{ option.name }} </li> 
+            }
         </ul>
     </div>
 </div>
